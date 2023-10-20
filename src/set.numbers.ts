@@ -4,7 +4,6 @@
  * License: CPOL
 */
 
-
 /**
  * Even numbers set
 */
@@ -34,8 +33,8 @@ export const prime = function (x: number) {
   if (x % 2 === 0) return false
   if (x < 9) return true
   if (x % 3 === 0) return false
-  var sqrt = Math.sqrt(x)
-  for (var i = 5; i <= sqrt; i += 6) {
+  const sqrt = Math.sqrt(x)
+  for (let i = 5; i <= sqrt; i += 6) {
     if (x % i === 0) return false
     if (x % (i + 2) === 0) return false
   }
@@ -47,7 +46,7 @@ export const prime = function (x: number) {
  *
 */
 export const getPrime = function (p: number) {
-  for (var i = 1, count = 0; ; i++) {
+  for (let i = 1, count = 0; ; i++) {
     if (prime(i)) count++
     if (count === p) return i
   }
