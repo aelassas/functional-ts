@@ -40,7 +40,7 @@ euclideanPlane.draw(set.intersection(disk(new Point(0, 0), 50), verticalHalfPlan
  * Translate
  *
 */
-let translate_timer: ReturnType<typeof setTimeout>
+let translate_timer: ReturnType<typeof setInterval>
 export function translate_op() {
   let deltay = 0
   clearTimeout(scale_timer)
@@ -55,7 +55,7 @@ export function translate_op() {
  * Scale
  *
 */
-let scale_timer: ReturnType<typeof setTimeout>
+let scale_timer: ReturnType<typeof setInterval>
 export function scale_op() {
   let deltay = 0, lambday = 0.05
   clearTimeout(translate_timer)
@@ -71,7 +71,7 @@ export function scale_op() {
  * Rotate
  *
 */
-let rotate_timer: ReturnType<typeof setTimeout>
+let rotate_timer: ReturnType<typeof setInterval>
 export function rotate_op() {
   let theta = 0
   clearTimeout(translate_timer)
