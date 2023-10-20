@@ -21,10 +21,10 @@ class Plane {
       semiWidth = this.width / 2, semiHeight = this.height / 2,
       xMin = -semiWidth, xMax = semiWidth,
       yMin = -semiHeight, yMax = semiHeight
-    for (var x = 0; x < this.width; x++) {
-      var xp = xMin + x * (xMax - xMin) / this.width
-      for (var y = 0; y < this.height; y++) {
-        var yp = yMax - y * (yMax - yMin) / this.height
+    for (let x = 0; x < this.width; x++) {
+      const xp = xMin + x * (xMax - xMin) / this.width
+      for (let y = 0; y < this.height; y++) {
+        const yp = yMax - y * (yMax - yMin) / this.height
         if (set(new Point(xp, yp))) context.fillRect(x, y, 1, 1)
       }
     }
