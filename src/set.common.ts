@@ -20,4 +20,4 @@ export const all = <T>() => (e: T) => true
 /**
  * Singleton set
 */
-export const singleton = <T>(x: T) => (y: T) => x === y 
+export const singleton = <T>(x: T) => (y: T) => x === y

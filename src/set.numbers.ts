@@ -7,27 +7,27 @@
 /**
  * Even numbers set
 */
-export const even = function (x: number) { return x % 2 === 0 }
+export const even = (x: number) => x % 2 === 0
 
 /**
  * Odd numbers set
 */
-export const odd = function (x: number) { return x % 2 === 1 }
+export const odd = (x: number) => x % 2 === 1
 
 /**
  * Multiples of 3 set
 */
-export const multipleOfThree = function (x: number) { return x % 3 === 0 }
+export const multipleOfThree = (x: number) => x % 3 === 0
 
 /**
  * Multiples of 5 set
 */
-export const multipleOfFive = function (x: number) { return x % 5 === 0 }
+export const multipleOfFive = (x: number) => x % 5 === 0
 
 /**
  * Primes set
 */
-export const prime = function (x: number) {
+export const prime = (x: number) => {
   if (x <= 1) return false
   if (x < 4) return true
   if (x % 2 === 0) return false
@@ -45,7 +45,7 @@ export const prime = function (x: number) {
  * Primes generator
  *
 */
-export const getPrime = function (p: number) {
+export const getPrime = (p: number) => {
   for (let i = 1, count = 0; ; i++) {
     if (prime(i)) count++
     if (count === p) return i
