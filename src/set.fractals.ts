@@ -17,12 +17,12 @@ class Complex {
         this.y = y
     }
 
-    toString() {
-        return this.x + ' + i * ' + this.y
-    }
-
     abs() {
         return Math.sqrt(this.x * this.x + this.y * this.y)
+    }
+
+    toString() {
+        return this.x + ' + i * ' + this.y
     }
 }
 
