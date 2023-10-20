@@ -48,13 +48,13 @@ class ComplexPlane {
     canvas.height = this.height
     const context = canvas.getContext('2d') as CanvasRenderingContext2D
     context.fillStyle = 'white'
-    for (var x = 0; x < this.width; x++) {
-      var xp = this.real_min + x * (this.real_max - this.real_min) / this.width
-      for (var y = 0; y < this.height; y++) {
-        var yp = this.imaginary_max - y * (this.imaginary_max - this.imaginary_min) / this.height
-        var c = new Complex(xp, yp)
-        var z = Complex.zero
-        for (var k = 0; k < this.fractalIterationsPerPixel; k++) z = fractal(c, z)
+    for (let x = 0; x < this.width; x++) {
+      const xp = this.real_min + x * (this.real_max - this.real_min) / this.width
+      for (let y = 0; y < this.height; y++) {
+        const yp = this.imaginary_max - y * (this.imaginary_max - this.imaginary_min) / this.height
+        const c = new Complex(xp, yp)
+        let z = Complex.zero
+        for (let k = 0; k < this.fractalIterationsPerPixel; k++) z = fractal(c, z)
         if (z.abs() < this.boundary) context.fillRect(x, y, 1, 1)
       }
     }
