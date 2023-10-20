@@ -1,0 +1,13 @@
+body {
+    margin: 20px 0 300px 20px
+}
+
+canvas {
+    border: #eee 1px solid;
+    width: 200px;
+    height: 200px
+}
+
+#ep_op {
+    margin-top: 20px
+}
