@@ -10,12 +10,12 @@
 /**
  * Empty set
 */
-export const empty = <T>() => (e: T) => false
+export const empty = <T>() => (_: T) => false
 
 /**
  * Set All
 */
-export const all = <T>() => (e: T) => true
+export const all = <T>() => (_: T) => true
 
 /**
  * Singleton set
