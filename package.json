@@ -2,7 +2,7 @@
   "name": "functional-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "set.numbers.demo.js",
+  "main": "dist/set.numbers.demo.js",
   "type": "module",
   "scripts": {
     "build": "rimraf ./dist && tsc",
