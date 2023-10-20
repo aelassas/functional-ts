@@ -1,5 +1,5 @@
 /**
- * PlaneSet.plane.js 
+ * PlaneSet.plane.ts
  * Author: Akram El Assas
  * License: CPOL
 */

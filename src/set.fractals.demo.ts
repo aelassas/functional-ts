@@ -1,5 +1,5 @@
 /**
- * set.fractals.demo.js 
+ * set.fractals.demo.ts
  * Author: Akram El Assas
  * License: CPOL
 */

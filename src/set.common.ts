@@ -1,5 +1,5 @@
 /**
- * set.common.js 
+ * set.common.ts
  * Author: Akram El Assas
  * License: CPOL
 */

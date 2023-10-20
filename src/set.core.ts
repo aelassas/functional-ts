@@ -1,5 +1,5 @@
 /**
- * set.core.js  
+ * set.core.ts 
  * Author: Akram El Assas
  * License: CPOL
 */
