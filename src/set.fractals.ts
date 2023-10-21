@@ -22,7 +22,7 @@ class Complex {
     }
 
     toString() {
-        return this.x + ' + i * ' + this.y
+        return `${this.x} + i * ${this.y}`
     }
 }
 
