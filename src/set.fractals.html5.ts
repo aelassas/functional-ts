@@ -4,7 +4,7 @@
  * License: CPOL
 */
 
-type Fractal = (c: Complex, z: Complex) => Complex
+type Fractal = (z: Complex, c: Complex) => Complex
 
 /**
  * Complex plane
@@ -54,7 +54,7 @@ class ComplexPlane {
         const yp = this.imaginary_max - y * (this.imaginary_max - this.imaginary_min) / this.height
         const c = new Complex(xp, yp)
         let z = Complex.zero
-        for (let k = 0; k < this.fractalIterationsPerPixel; k++) z = fractal(c, z)
+        for (let k = 0; k < this.fractalIterationsPerPixel; k++) z = fractal(z, c)
         if (z.abs() < this.boundary) context.fillRect(x, y, 1, 1)
       }
     }

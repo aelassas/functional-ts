@@ -6,7 +6,7 @@
 
 const complexPlane = new ComplexPlane(300, 300, -1.5, 1.5, -1.5, 1.5, 1.5, 20, 'fractal')
 
-const mandelbrot = (c: Complex, z: Complex) => add(multiply(z, z), c)
+const mandelbrot = (z: Complex, c: Complex) => add(multiply(z, z), c)
 
 complexPlane.pleaseWait()
 
