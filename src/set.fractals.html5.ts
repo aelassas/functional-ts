@@ -4,7 +4,7 @@
  * License: CPOL
 */
 
-type Fractal = (z: Complex, c: Complex) => Complex
+type Fractal = (c: Complex, z: Complex) => Complex
 
 /**
  * Complex plane
