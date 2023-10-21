@@ -61,7 +61,7 @@ class ComplexPlane {
   }
 
   /*
-   * Displays 'Please wait...' at the center of the canvas
+   * Display 'Please wait...' at the center of the canvas
    *
   */
   pleaseWait() {
