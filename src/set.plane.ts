@@ -6,7 +6,7 @@
 
 /*
  * Point
- * 
+ *
 */
 class Point {
     x: number
@@ -23,7 +23,7 @@ class Point {
  *
 */
 function distance(p1: Point, p2: Point) {
-    return Math.sqrt(Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2))
+    return Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)
 }
 
 /*
@@ -36,13 +36,13 @@ const disk = (center: Point, radius: number) => (p: Point) => distance(p, center
  * Horizontal half plane
  *
 */
-const horizontalHalfPlane = (y: number, isLowerThan: boolean) => (p: Point) => isLowerThan ? p.y <= y : p.y >= y
+const horizontalHalfPlane = (y: number, isLowerThan: boolean) => (p: Point) => (isLowerThan ? p.y <= y : p.y >= y)
 
 /*
  * Vertical half plane
  *
 */
-const verticalHalfPlane = (x: number, isLowerThan: boolean) => (p: Point) => isLowerThan ? p.x <= x : p.x >= x
+const verticalHalfPlane = (x: number, isLowerThan: boolean) => (p: Point) => (isLowerThan ? p.x <= x : p.x >= x)
 
 type PlaneSet = (p: Point) => boolean
 
@@ -65,4 +65,4 @@ const scale = (e: PlaneSet, lambdax: number, lambday: number, deltax: number, de
  *
 */
 const rotatePoint = (theta: number) => (p: Point) => new Point(p.x * Math.cos(theta) - p.y * Math.sin(theta), p.x * Math.sin(theta) + p.y * Math.cos(theta))
-const rotate = (e: PlaneSet, theta: number) => (p: Point) => e(rotatePoint(-theta)(p)) 
+const rotate = (e: PlaneSet, theta: number) => (p: Point) => e(rotatePoint(-theta)(p))

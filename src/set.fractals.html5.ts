@@ -29,7 +29,7 @@ class ComplexPlane {
     imaginary_max: number,
     boundary: number,
     fractalIterationsPerPixel: number,
-    canvasId: string
+    canvasId: string,
   ) {
     this.width = width
     this.height = height
@@ -49,9 +49,9 @@ class ComplexPlane {
     const context = canvas.getContext('2d') as CanvasRenderingContext2D
     context.fillStyle = 'white'
     for (let x = 0; x < this.width; x++) {
-      const xp = this.real_min + x * (this.real_max - this.real_min) / this.width
+      const xp = this.real_min + (x * (this.real_max - this.real_min)) / this.width
       for (let y = 0; y < this.height; y++) {
-        const yp = this.imaginary_max - y * (this.imaginary_max - this.imaginary_min) / this.height
+        const yp = this.imaginary_max - (y * (this.imaginary_max - this.imaginary_min)) / this.height
         const c = new Complex(xp, yp)
         let z = Complex.zero
         for (let k = 0; k < this.fractalIterationsPerPixel; k++) z = fractal(z, c)

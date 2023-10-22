@@ -1,11 +1,11 @@
 /**
- * set.core.ts 
+ * set.core.ts
  * Author: Akram El Assas
  * License: CPOL
 */
 
 /* functors
-****************************************/
+*************************************** */
 
 type Set<T> = (x: T) => boolean
 
@@ -61,4 +61,4 @@ export const add = <T>(e: Set<T>, y: T) => (x: T) => x === y || e(x)
  * Remove
  *
 */
-export const remove = <T>(e: Set<T>, y: T) => (x: T) => x !== y && e(x) 
+export const remove = <T>(e: Set<T>, y: T) => (x: T) => x !== y && e(x)

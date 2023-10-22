@@ -1,11 +1,11 @@
 /**
- * set.numbers.demo 
+ * set.numbers.demo
  * Author: Akram El Assas
  * License: CPOL
  *
 */
 
-/* 
+/*
  * Load set.core, set.common and set.numbers to perfom the demo.
  *
 */
@@ -52,7 +52,6 @@ console.log('Is 998 in odd numbers set? ', numbers.odd(998))
 console.log('\nMultiples of 3 set:')
 console.log('Is 99 in multiples of 3 set? ', numbers.multipleOfThree(99))
 console.log('Is 998 in multiples of 3 set? ', numbers.multipleOfThree(998))
-
 
 /**
  * Multiples of 5 set
