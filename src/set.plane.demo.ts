@@ -3,7 +3,7 @@
  * Author: Akram El Assas
  * License: CPOL
 */
-import * as set from './set.core.js'
+import * as set from './set.core'
 
 /*
  * Initialize the euclidean plane
