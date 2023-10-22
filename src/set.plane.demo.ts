@@ -89,7 +89,7 @@ export function rotate_op() {
 }
 
 /**
- * Clear timers
+ * Clear timers and canvas
  */
 export function clear(canvasId: string) {
   clearTimeout(translate_timer)
