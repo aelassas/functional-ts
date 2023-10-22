@@ -1,5 +1,5 @@
 /**
- * PlaneSet.plane.ts
+ * set.plane.ts
  * Author: Akram El Assas
  * License: CPOL
 */
