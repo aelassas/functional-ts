@@ -41,12 +41,6 @@
     "semi": [
       "error",
       "never"
-    ],
-    "brace-style": [
-      "error",
-      "1tbs"
-    ],
-    "curly": "error",
-    "@typescript-eslint/no-explicit-any": "off"
+    ]
   }
 }
