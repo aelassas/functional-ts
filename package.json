@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint --ext .ts .",
     "build": "rimraf ./dist && tsc && fix-esm-import-path dist",
-    "numbers": "npm run build && node --experimental-specifier-resolution=node dist/set.numbers.demo.js",
+    "numbers": "npm run build && node dist/set.numbers.demo.js",
     "plane": "npm run build && http-server -p 0 -o src/set.plane.demo.html",
     "fractals": "npm run build && http-server -p 0 -o src/set.fractals.demo.html"
   },
