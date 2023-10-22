@@ -12,33 +12,28 @@
 <body>
   <!-- HTML5
   ================================================== -->
-  <article>
-    <section>
-      <h1>1. Disk</h1>
-      <canvas id="disk"></canvas>
-      <h1>2. Horizental half plane</h1>
-      <canvas id="hhp"></canvas>
-      <h1>3. Vertical half plane</h1>
-      <canvas id="vhp"></canvas>
-      <h1>4. Half disk</h1>
-      <canvas id="hd"></canvas>
-      <h1>5. Euclidean plane operations</h1>
-      <div class="dropdown">
-        <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Choose operation</button>
-        <ul class="dropdown-menu">
-          <li><a id="translate" class="dropdown-item" href="javascript:void(0)">Translate</a></li>
-          <li><a id="scale" class="dropdown-item" href="javascript:void(0)">Scale</a></li>
-          <li><a id="rotate" class="dropdown-item" href="javascript:void(0)">Rotate</a></li>
-        </ul>
-      </div>
-      <br>
-      <canvas id="ep_op"></canvas>
-    </section>
-  </article>
+  <h2>1. Disk</h2>
+  <canvas id="disk"></canvas>
+  <h2>2. Horizental half plane</h2>
+  <canvas id="hhp"></canvas>
+  <h2>3. Vertical half plane</h2>
+  <canvas id="vhp"></canvas>
+  <h2>4. Half disk</h2>
+  <canvas id="hd"></canvas>
+  <h2>5. Euclidean plane operations</h2>
+  <div class="dropdown">
+    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Choose operation</button>
+    <ul class="dropdown-menu">
+      <li><a id="translate" class="dropdown-item" href="javascript:void(0)">Translate</a></li>
+      <li><a id="scale" class="dropdown-item" href="javascript:void(0)">Scale</a></li>
+      <li><a id="rotate" class="dropdown-item" href="javascript:void(0)">Rotate</a></li>
+    </ul>
+  </div>
+  <canvas id="ep_op"></canvas>
   <!-- JavaScript
   ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
+  <!-- Placed at the end of the document so the page loads faster -->
   <script charset="UTF-8" src="bootstrap.bundle.min.js"></script>
   <script charset="UTF-8" src="../dist/set.common.js" type="module"></script>
   <script charset="UTF-8" src="../dist/set.plane.js"></script>
