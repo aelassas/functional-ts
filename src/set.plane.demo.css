@@ -8,6 +8,10 @@ canvas {
     height: 200px
 }
 
+.form-select {
+    width: 200px
+}
+
 #ep_op {
     margin-top: 20px
 }

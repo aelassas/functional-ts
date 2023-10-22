@@ -15,6 +15,7 @@ class Plane {
 
   draw(set: PlaneSet, canvasId: string) {
     const canvas = document.getElementById(canvasId) as HTMLCanvasElement
+    if (!canvas) throw new Error(`Canvas with id ${canvasId} not found`)
     canvas.width = this.width
     canvas.height = this.height
     const context = canvas.getContext('2d') as CanvasRenderingContext2D
@@ -31,5 +32,12 @@ class Plane {
         if (set(new Point(xp, yp))) context.fillRect(x, y, 1, 1)
       }
     }
+  }
+
+  clear(canvasId: string) {
+    const canvas = document.getElementById(canvasId) as HTMLCanvasElement
+    if (!canvas) throw new Error(`Canvas with id ${canvasId} not found`)
+    const context = canvas.getContext('2d') as CanvasRenderingContext2D
+    context.clearRect(0, 0, this.width, this.height)
   }
 }

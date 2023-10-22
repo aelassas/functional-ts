@@ -87,3 +87,13 @@ export function rotate_op() {
     theta = (theta + Math.PI / 2) % (2 * Math.PI)
   }, 1000)
 }
+
+/**
+ * Clear timers
+ */
+export function clear(canvasId: string) {
+  clearTimeout(translate_timer)
+  clearTimeout(scale_timer)
+  clearTimeout(rotate_timer)
+  euclideanPlane.clear(canvasId)
+}

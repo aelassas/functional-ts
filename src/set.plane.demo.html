@@ -5,8 +5,8 @@
   <meta name="author" content="Akram El Assas">
   <!-- CSS
   ================================================== -->
-  <link rel="stylesheet" media="all" href="bootstrap.min.css">
-  <link rel="stylesheet" media="all" href="set.plane.demo.css">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="set.plane.demo.css">
 </head>
 
 <body>
@@ -21,28 +21,40 @@
   <h2>4. Half disk</h2>
   <canvas id="hd"></canvas>
   <h2>5. Euclidean plane operations</h2>
-  <div class="dropdown">
-    <button class="btn btn-warning dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      Choose operation</button>
-    <ul class="dropdown-menu">
-      <li><a id="translate" class="dropdown-item" href="javascript:void(0)">Translate</a></li>
-      <li><a id="scale" class="dropdown-item" href="javascript:void(0)">Scale</a></li>
-      <li><a id="rotate" class="dropdown-item" href="javascript:void(0)">Rotate</a></li>
-    </ul>
-  </div>
+  <select class="form-select">
+    <option value="clear" selected>Choose operation</option>
+    <option value="translate">Translate</option>
+    <option value="scale">Scale</option>
+    <option value="rotate">Rotate</option>
+  </select>
   <canvas id="ep_op"></canvas>
   <!-- JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the page loads faster -->
-  <script charset="UTF-8" src="bootstrap.bundle.min.js"></script>
-  <script charset="UTF-8" src="../dist/set.common.js" type="module"></script>
-  <script charset="UTF-8" src="../dist/set.plane.js"></script>
-  <script charset="UTF-8" src="../dist/set.plane.html5.js"></script>
-  <script charset="UTF-8" src="../dist/set.plane.demo.js" type="module"></script>
+  <script src="../dist/set.common.js" type="module"></script>
+  <script src="../dist/set.plane.js"></script>
+  <script src="../dist/set.plane.html5.js"></script>
+  <script src="../dist/set.plane.demo.js" type="module"></script>
   <script type="module">
     import * as plane from '../dist/set.plane.demo.js'
-    document.querySelector('#translate').addEventListener('click', plane.translate_op)
-    document.querySelector('#scale').addEventListener('click', plane.scale_op)
-    document.querySelector('#rotate').addEventListener('click', plane.rotate_op)
+
+    document
+      .querySelector('.form-select')
+      .addEventListener('change', (e) => {
+        switch (e.target.value) {
+          case 'translate':
+            plane.translate_op()
+            break
+          case 'scale':
+            plane.scale_op()
+            break
+          case 'rotate':
+            plane.rotate_op()
+            break
+          case 'clear':
+            plane.clear('ep_op')
+            break
+        }
+      })
   </script>
 </body>
