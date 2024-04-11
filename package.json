@@ -10,25 +10,25 @@
     "numbers": "npm run build && node dist/set.numbers.demo.js",
     "plane": "npm run build && http-server -p 0 -o src/set.plane.demo.html",
     "fractals": "npm run build && http-server -p 0 -o src/set.fractals.demo.html",
-    "ncu": "ncu -u -x typescript"
+    "ncu": "ncu -u"
   },
   "author": "Akram El Assas",
   "license": "ISC",
   "dependencies": {
-    "@babel/cli": "^7.23.4",
-    "@babel/preset-env": "^7.23.3",
-    "@types/node": "^20.10.0",
+    "@babel/cli": "^7.24.1",
+    "@babel/preset-env": "^7.24.4",
+    "@types/node": "^20.12.7",
     "babel-plugin-add-import-extension": "^1.6.0",
+    "eslint": "^8.57.0",
     "http-server": "^14.1.1",
     "rimraf": "^5.0.5",
-    "typescript": "^5.2.2"
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.12.0",
-    "@typescript-eslint/parser": "^6.12.0",
-    "eslint": "^8.54.0",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "@typescript-eslint/parser": "^7.6.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.29.0",
-    "npm-check-updates": "^16.14.11"
+    "eslint-plugin-import": "^2.29.1",
+    "npm-check-updates": "^16.14.18"
   }
 }
