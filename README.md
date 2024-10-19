@@ -37,19 +37,27 @@ This article will not discuss the basics of functional programming, as you can f
 
 To run the source code, you'll need to install [Node.js](https://nodejs.org/en). Once Node.js is installed, download the source code archive, unzip it, go to the source code folder you unzipped on a terminal, set up TypeScript environment and install all necessary dependencies with the following command:
 
-<pre lang="shell">npm install</pre>
+```bash
+npm install
+```
 
 To run numbers' demo, run the following command:
 
-<pre lang="shell">npm run numbers</pre>
+```bash
+npm run numbers
+```
 
 To run Euclidean plane's demo, run the following command:
 
-<pre lang="shell">npm run plane</pre>
+```bash
+npm run plane
+```
 
 To run fractals' demo, run the following command:
 
-<pre lang="shell">npm run fractals</pre>
+```bash
+npm run fractals
+```
 
 ## <a id="rep-data" name="rep-data">Representing Data Through Functions</a>
 
@@ -88,7 +96,7 @@ In the next sections, we will see how to represent some fundamental sets in the 
 
 This section introduces the representation of some fundamental sets in the algebra of sets through TypeScript.
 
-#### Empty set
+### Empty set
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/EmptySet.png?raw=true)
 
@@ -101,9 +109,9 @@ Empty(x) = false if x is not in E
 
 Thus, the representation of `E` in TypeScript can be defined as follows:
 
-<pre lang="typescript">
+```js
 const empty = <T>() => (e: T) => false
-</pre>
+```
 
 In algebra of sets, `Empty` is represented as follows:
 
@@ -111,16 +119,16 @@ In algebra of sets, `Empty` is represented as follows:
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nEmpty set:')
 console.log('Is 7 in {}?', common.empty<number>()(7))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/EmptySetDemo.PNG?raw=true)
 
-#### Set All
+### Set All
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/AllSet.png?raw=true)
 
@@ -132,9 +140,9 @@ All(x) = true if x is in S
 
 Thus, the representation of `S'` in TypeScript can be defined as follows:
 
-<pre lang="typescript">
+```js
 const all = <T>() => (e: T) => true
-</pre>
+```
 
 In algebra of sets, `All` is represented as follows:
 
@@ -142,16 +150,16 @@ In algebra of sets, `All` is represented as follows:
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nSet All:')
 console.log('Is 7 in integers set?', common.all<number>()(7))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/AllSetDemo.png?raw=true)
 
-#### Singleton Set
+### Singleton Set
 
 Let `E` be the Singleton set and `Singleton` its _Characteristic function_. In algebra of sets, `E` also known as unit set, or 1-tuple is a set with exactly one element `e`. Therefore, `Singleton` can be defined as follows:
 
@@ -162,27 +170,27 @@ Singleton(x) = false if x is not e
 
 Thus, the representation of `E` in TypeScript can be defined as follows:
 
-<pre lang="typescript">
+```js
 const singleton = <T>(x: T) => (y: T) => x === y
-</pre>
+```
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nSingleton set:')
 console.log('Is 7 in the singleton set {0}?', common.singleton(0)(7))
 console.log('Is 7 in the singleton set {7}?', common.singleton(7)(7)
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/SingletonSetDemo.png?raw=true)
 
-#### Other Sets
+### Other Sets
 
 This section presents subsets of the integers set.
 
-##### Even Numbers
+#### Even Numbers
 
 Let `E` be the set of even numbers and `Even` its _Characteristic function_. In mathematics, an even number is a number which is a multiple of two. Therefore, `Even` can be defined as follows:
 
@@ -193,23 +201,23 @@ Even(x) = false if x is not a multiple of 2
 
 Thus, the representation of `E` in TypeScript can be defined as follows:
 
-<pre lang="typescript">
+```js
 const even = (x: number) => x % 2 === 0
-</pre>
+```
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nEven numbers set:')
 console.log('Is 99 in even numbers set?', numbers.even(99))
 console.log('Is 998 in even numbers set?', numbers.even(998))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/EvenSetDemo.PNG?raw=true)
 
-##### Odd Numbers
+#### Odd Numbers
 
 Let `E` be the set of odd numbers and `Odd` its _Characteristic function_. In mathematics, an odd number is a number which is not a multiple of two. Therefore, `Odd` can be defined as follows:
 
@@ -220,23 +228,23 @@ Odd(x) = false if x is a multiple of 2
 
 Thus, the representation of `E` in TypeScript can be defined as follows:
 
-<pre lang="typescript">
+```js
 const odd = (x: number) => x % 2 === 1
-</pre>
+```
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nOdd numbers set:')
 console.log('Is 99 in odd numbers set?', numbers.odd(99))
 console.log('Is 998 in odd numbers set?', numbers.odd(998))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/OddSetDemo.PNG?raw=true)
 
-##### Multiples of 3
+#### Multiples of 3
 
 Let `E` be the set of multiples of 3 and `MultipleOfThree` its _Characteristic function_. In mathematics, a multiple of 3 is a number divisible by 3\. Therefore, `MultipleOfThree` can be defined as follows:
 
@@ -247,21 +255,21 @@ MultipleOfThree(x) = false if x is not divisible by 3
 
 Thus, the representation of `E` in TypeScript can be defined as follows:
 
-<pre lang="typescript">const multipleOfThree = (x: number) => x % 3 === 0</pre>
+```jsconst multipleOfThree = (x: number) => x % 3 === 0```
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nMultiples of 3 set:')
 console.log('Is 99 in multiples of 3 set?', numbers.multipleOfThree(99))
 console.log('Is 998 in multiples of 3 set?', numbers.multipleOfThree(998))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/MultiplesOf3SetDemo.PNG?raw=true)
 
-##### Multiples of 5
+#### Multiples of 5
 
 Let `E` be the set of multiples of 5 and `MultipleOfFive` its _Characteristic function_. In mathematics, a multiple of 5 is a number divisible by 5\. Therefore, `MultipleOfFive` can be defined as follows:
 
@@ -272,21 +280,21 @@ MultipleOfFive(x) = false if x is not divisible by 5
 
 Thus, the representation of `E` in TypeScript can be defined as follows:
 
-<pre lang="typescript">const multipleOfFive = (x: number) => x % 5 === 0</pre>
+```jsconst multipleOfFive = (x: number) => x % 5 === 0```
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nMultiples of 5 set:')
 console.log('Is 15 in multiples of 5 set?', numbers.multipleOfFive(15))
 console.log('Is 998 in multiples of 5 set?', numbers.multipleOfFive(998))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/MultiplesOf5SetDemo.PNG?raw=true)
 
-##### Prime Numbers
+#### Prime Numbers
 
 A long time ago, when I was playing with [Project Euler](http://projecteuler.net/) problems, I had to resolve the following one:
 
@@ -307,7 +315,7 @@ Prime(x) = false if x is not prime
 
 Thus, the representation of `E` in TypeScript can be defined as follows:
 
-<pre lang="typescript">
+```js
 const prime = (x: number) => {
   if (x <= 1) return false
   if (x < 4) return true
@@ -321,27 +329,27 @@ const prime = (x: number) => {
   }
   return true
 }
-</pre>
+```
 
 Thus, running the code below to resolve our problem:
 
-<pre lang="typescript">
+```js
 console.log('\nPrimes set:')
 console.log('Is 2 in primes set?', numbers.prime(2))
 console.log('Is 4 in primes set?', numbers.prime(4))
 console.log('The 10 001st prime number is', numbers.getPrime(10001))
-</pre>
+```
 
 where `getPrime` is defined below:
 
-<pre lang="typescript">
+```js
 const getPrime = (p: number) => {
   for (let i = 1, count = 0; ; i++) {
     if (prime(i)) count++
     if (count === p) return i
   }
 }
-</pre>
+```
 
 gives the following results:
 
@@ -353,7 +361,7 @@ This section presents several fundamental operations for constructing new sets f
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/Logical_connectives_Hasse_diagram.png?raw=true)
 
-#### Union
+### Union
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/UnionOperation.png?raw=true)
 
@@ -361,22 +369,22 @@ Let `E` and `F` be two sets. The _union_ of `E` and `F`, denoted by `E U F` is t
 
 Let `Union` be the _union_ operation. Thus, the `Union` operation can be implemented as follows in TypeScript:
 
-<pre lang="typescript">
+```js
 const union = <T>(e: Set<T>, f: Set<T>) => (x: T) => e(x) || f(x)
-</pre>
+```
 
 Running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nUnion:')
 console.log('Is 7 in the union of Even and Odd Integers Set?', core.union(numbers.even, numbers.odd)(7))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/UnionOperationDemo.png?raw=true)
 
-#### Intersection
+### Intersection
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/IntersectionOperation.png?raw=true)
 
@@ -384,22 +392,22 @@ Let `E` and `F` be two sets. The _intersection_ of `E` and `F`, denoted by `E n 
 
 Let `Intersection` be the _intersection_ operation. Thus, the `Intersection` operation can be implemented as follows in TypeScript:
 
-<pre lang="typescript">const intersection = <T>(e: Set<T>, f: Set<T>) => (x: T) => e(x) && f(x)</pre>
+```jsconst intersection = <T>(e: Set<T>, f: Set<T>) => (x: T) => e(x) && f(x)```
 
 Running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nIntersection:')
 const multiplesOfThreeAndFive = core.intersection(numbers.multipleOfThree, numbers.multipleOfFive)
 console.log('Is 15 a multiple of 3 and 5?', multiplesOfThreeAndFive(15))
 console.log('Is 10 a multiple of 3 and 5?', multiplesOfThreeAndFive(10))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/IntersectionOperationDemo.png?raw=true)
 
-#### Cartesian Product
+### Cartesian Product
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/CartesianProductOperation.png?raw=true)
 
@@ -407,23 +415,23 @@ Let `E` and `F` be two sets. The _cartesian product_ of `E` and `F`, denoted by 
 
 Let `CartesianProduct` be the _cartesian product_ operation. Thus, the `CartesianProduct` operation can be implemented as follows in TypeScript:
 
-<pre lang="typescript">
+```js
 const cartesianProduct = <T1, T2>(e: Set<T1>, f: Set<T2>) => (x: T1, y: T2) => e(x) && f(y)
-</pre>
+```
 
 Running the code below:
 
-<pre lang="typescript"
->console.log('\nCartesian Product:')
+```js
+console.log('\nCartesian Product:')
 const cp = core.cartesianProduct(numbers.multipleOfThree, numbers.multipleOfFive)
 console.log('Is (9, 15) in MultipleOfThree x MultipleOfFive? ', cp(9, 15))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/CartesianProductOperationDemo.PNG?raw=true)
 
-#### Complements
+### Complements
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/ComplementOperation.png?raw=true)
 
@@ -431,23 +439,23 @@ Let `E` and `F` be two sets. The _relative complement_ of `F` in `E`, denoted by
 
 Let `Complement` be the _relative complement_ operation. Thus, the `Complement` operation can be implemented as follows in TypeScript:
 
-<pre lang="typescript">
-const complement = <T>(e: Set<T>, f: Set<T>) => (x: T) => e(x) && !f(x)</pre>
+```js
+const complement = <T>(e: Set<T>, f: Set<T>) => (x: T) => e(x) && !f(x)```
 
 Running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nComplement:')
 const c = core.complement(numbers.multipleOfThree, numbers.multipleOfFive)
 console.log('Is 15 in MultipleOfThree \\ MultipleOfFive set? ', c(15))
 console.log('Is 9 in MultipleOfThree \\ MultipleOfFive set? ', c(9))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/ComplementOperationDemo.PNG?raw=true)
 
-#### Symmetric Difference
+### Symmetric Difference
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/SymetricDifference.png?raw=true)
 
@@ -455,20 +463,20 @@ Let `E` and `F` be two sets. The _symmetric difference_ of `E` and `F`, denoted 
 
 Let `SymmetricDifference` be the _symmetric difference_ operation. Thus, the `SymmetricDifference` operation can be implemented in two ways in TypeScript. A trivial way is to use the union and complement operations as follows:
 
-<pre lang="typescript">
+```js
 const symmetricDifferenceWithoutXor = <T>(e: Set<T>, f: Set<T>) => 
       (x: T) => union(complement<T>(e, f), complement(f, e))(x)
-</pre>
+```
 
 Another way is to use the `XOR` binary operation as follows:
 
-<pre lang="typescript">
+```js
 const symmetricDifferenceWithXor = <T>(e: Set<T>, f: Set<T>) => (x: T) => e(x) !== f(x)
-</pre>
+```
 
 Running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nSymmetricDifference without XOR:')
 const sdWithoutXor = core.symmetricDifferenceWithoutXor(numbers.prime, numbers.even)
 console.log('Is 2 in the symetric difference of prime and even Sets? ', sdWithoutXor(2))
@@ -480,78 +488,78 @@ const sdWithXor = core.symmetricDifferenceWithXor(numbers.prime, numbers.even)
 console.log('Is 2 in the symetric difference of prime and even Sets? ', sdWithXor(2))
 console.log('Is 4 in the symetric difference of prime and even Sets? ', sdWithXor(4))
 console.log('Is 7 in the symetric difference of prime and even Sets? ', sdWithXor(7))
-</pre>
+```
 
 gives the following results:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/SymetricDifferenceDemo.png?raw=true)
 
-#### Other Operations
+### Other Operations
 
 This section presents other useful binary operations on sets.
 
-##### Contains
+#### Contains
 
 Let `Contains` be the operation that checks whether or not an element is in a set. This operation is a function that takes as parameter an element and returns `true` if the element is in the set, `false` otherwise.
 
 Thus, this operation is defined as follows in TypeScript:
 
-<pre lang="typescript">
+```js
 const contains = <T>(e: Set<T>, x: T) => e(x)
-</pre>
+```
 
 Therefore, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nContains:')
 console.log('Is 7 in the singleton {0}? ', core.contains(common.singleton(0), 7))
 console.log('Is 7 in the singleton {7}? ', core.contains(common.singleton(7), 7))
-</pre>
+```
 
 gives the following result:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/ContainsOperationDemo.PNG?raw=true)
 
-##### Add
+#### Add
 
 Let `Add` be the operation that adds an element to a set. This operation is a function that takes as parameter an element and adds it to the set.
 
 Thus, this operation is defined as follows in TypeScript:
 
-<pre lang="typescript">
+```js
 const add = <T>(e: Set<T>, y: T) => (x: T) => x === y || e(x)
-</pre>
+```
 
 Therefore, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nAdd:')
 console.log('Is 7 in {0, 7}? ', core.add<number>(common.singleton(0), 7)(7))
 console.log('Is 0 in {1, 0}? ', core.add<number>(common.singleton(1), 0)(0))
 console.log('Is 7 in {19, 0}? ', core.add<number>(common.singleton(19), 0)(7))
-</pre>
+```
 
 gives the following result:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/AddOperationDemo.PNG?raw=true)
 
-##### Remove
+#### Remove
 
 Let `Remove` be the operation that removes an element from a set. This operations is a function that takes as parameter an element and removes it from the set.
 
 Thus, this operation is defined as follows in TypeScript:
 
-<pre lang="typescript">
+```js
 const remove = <T>(e: Set<T>, y: T) => (x: T) => x !== y && e(x)
-</pre>
+```
 
 Therefore, running the code below:
 
-<pre lang="typescript">
+```js
 console.log('\nRemove:')
 console.log('Is 7 in {}? ', core.remove<number>(common.singleton(0), 0)(7))
 console.log('Is 0 in {}? ', core.remove<number>(common.singleton(7), 7)(0))
-</pre>
+```
 
 gives the following result:
 
@@ -583,15 +591,15 @@ In this section, we will set up the _Characterstic function_ of the _Closed_ dis
 
 To set up the _Characterstic function_, we first need a function that calculates the _Euclidean Distance_ between two points in the plane. This function is implemented as follows:
 
-<pre lang="typescript">
+```js
 function distance(p1: Point, p2: Point) {
     return Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)
 }
-</pre>
+```
 
 where `Point` is defined below:
 
-<pre lang="typescript">
+```js
 class Point {
     x: number
     y: number
@@ -601,7 +609,7 @@ class Point {
         this.y = y
     }
 }
-</pre>
+```
 
 This formula is based on Pythagoras' Theorem.
 
@@ -617,9 +625,9 @@ where `a` and `b` are the coordinates of the center and `R` the radius.
 
 Thus, the implementation of `Disk` in TypeScript is as follows:
 
-<pre lang="typescript">
+```js
 const disk = (center: Point, radius: number) => (p: Point) => distance(p, center) <= radius
-</pre>
+```
 
 In order to view the set in a HTML5 page, I decided to implement a function `draw` that draws a set in the _Euclidean plane_. I chose _HTML5_ and thus used the `canvas` element for drawing.
 
@@ -629,7 +637,7 @@ Thus, I've built the _Euclidean plane_ illustrated below through the method `dra
 
 Below the implementation of the plane.
 
-<pre lang="typescript">
+```js
 class Plane {
   width: number
   height: number
@@ -667,22 +675,22 @@ class Plane {
     context.clearRect(0, 0, this.width, this.height)
   }
 }
-</pre>
+```
 
 In the `draw` function, a `canvas` having the same width and the same height as the _Euclidean plane_ container is created. Then each point in pixels `(x,y)` of the `canvas` is replaced by a black point if it belongs to the `set`. `xMin`, `xMax`, `yMin` and `yMax` are the bounding values illustrated in the figure of the _Euclidean plane_ above.
 
 Running the code below:
 
-<pre lang="typescript">
+```js
 euclideanPlane = new Plane(200, 200)
 euclideanPlane.draw(disk(new Point(0, 0), 50), 'disk')
-</pre>
+```
 
 where `disk` is the `id` of the canvas:
 
-<pre lang="html">
+```html
 <canvas id="disk"></canvas>
-</pre>
+```
 
 gives the following result:
 
@@ -698,22 +706,22 @@ In this section, we will set up the _Characteristic functions_ of the _horizonta
 
 Let `HorizontalHalfPlane` be the _Characteristic function_ of a _horizontal_ half-plane. The implementation of `HorizontalHalfPlane` in TypeScript is as follows:
 
-<pre lang="typescript">
+```js
 const horizontalHalfPlane = (y: number, isLowerThan: boolean) => 
       (p: Point) => (isLowerThan ? p.y <= y : p.y >= y)
-</pre>
+```
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 euclideanPlane.draw(horizontalHalfPlane(0, true),'hhp')
-</pre>
+```
 
 where `hhp` is the `id` of the canvas:
 
-<pre lang="html">
+```html
 <canvas id="hhp"></canvas>
-</pre>
+```
 
 gives the following result:
 
@@ -721,20 +729,20 @@ gives the following result:
 
 Let `VerticalHalfPlane` be the _Characteristic function_ of a _vertical_ half-plane. The implementation of `VerticalHalfPlane` in TypeScript is as follows:
 
-<pre lang="typescript">const verticalHalfPlane = (x: number, isLowerThan: boolean) => 
-      (p: Point) => (isLowerThan ? p.x <= x : p.x >= x)</pre>
+```jsconst verticalHalfPlane = (x: number, isLowerThan: boolean) => 
+      (p: Point) => (isLowerThan ? p.x <= x : p.x >= x)```
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 euclideanPlane.draw(verticalHalfPlane(0, false),'vhp')
-</pre>
+```
 
 where `vhd` is the `id` of the canvas:
 
-<pre lang="html">
+```html
 <canvas id="vhd"></canvas>
-</pre>
+```
 
 gives the following result:
 
@@ -744,16 +752,16 @@ In the first section of the article, we set up basic binary operations on sets. 
 
 Therefore, running the sample below:
 
-<pre lang="typescript">
+```js
 euclideanPlane.draw(set.intersection(disk(new Point(0, 0), 50), 
                     verticalHalfPlane(0, false)), 'hd')
-</pre>
+```
 
 where `hd` is the `id` of the canvas:
 
-<pre lang="html">
+```html
 <canvas id="hd"></canvas>
-</pre>
+```
 
 gives the following result:
 
@@ -763,30 +771,31 @@ gives the following result:
 
 This section presents functions on the sets in the Euclidean plane.
 
-#### Translate
+### Translate
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/TranslateFunction.png?raw=true)
 
 Let `translatePoint` be the function that translates a point in the plane. In Euclidean geometry, `translatePoint` is a function that moves a given point a constant distance in a specified direction. Thus the implementation in TypeScript is as follows:
 
-<pre lang="typescript">
+```js
 const translatePoint = (deltax: number, deltay: number) => 
                        (p: Point) => new Point(p.x + deltax, p.y + deltay)
-</pre>
+```
 
 where `(deltax, deltay)` is the constant vector of the translation.
 
 Let `translate` be the function that translates a set in the plane. This function is simply implemented as follows in TypeScript:
 
-<pre lang="typescript">
+```js
 const translate = (e: PlaneSet, deltax: number, deltay: number) => 
-                  (p: Point) => e(translatePoint(-deltax, -deltay)(p))</pre>
+                  (p: Point) => e(translatePoint(-deltax, -deltay)(p))
+```
 
 `translate` takes as parameters `deltax` which is the delta distance in the first Euclidean dimension and `deltay` which is the delta distance in the second Euclidean dimension. If a point _P (x, y)_ is translated in a set _S_, then its coordinates will change to _(x', y') = (x, delatx, y, deltay)_. Thus, the point _(x' - delatx, y' - deltay)_ will always belong to the set _S_. In set algebra, `translate` is called isomorph, in other words, the set of all translations forms the _translation group T_, which is isomorphic to the space itself. This explains the main logic of the function.
 
 Thus, running the code below in our HTML5 page:
 
-<pre lang="typescript">
+```js
 let translate_timer: ReturnType<typeof setInterval>
 function translate_op() {
   let deltay = 0
@@ -797,19 +806,19 @@ function translate_op() {
     euclideanPlane.draw(translate(disk(new Point(0, -50), 50), 0, deltay), 'ep_op')
   }, 1000)
 }
-</pre>
+```
 
 where `ep_op` is the `id` of the canvas:
 
-<pre lang="html">
+```html
 <canvas id="ep_op"></canvas>
-</pre>
+```
 
 gives the following result:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/TranslationDemo.gif?raw=true)
 
-#### Homothety
+### Homothety
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/ScaleFunction.gif?raw=true)
 
@@ -819,26 +828,26 @@ Let `scalePoint` be the function that sends any point _M_ to another point _N_ s
 
 Thus the implementation in TypeScript is as follows:
 
-<pre lang="typescript">
+```js
 const scalePoint = (lambdax: number, lambday: number, deltax: number, deltay: number) 
       => (p: Point) => new Point(lambdax * p.x + deltax, lambday * p.y + deltay)
-</pre>
+```
 
 where `(deltax, deltay)` is the constant vector of the translation and `(lambdax, lambday)` is the lambda vector.
 
 Let `scale` be the function that applies an homothety on a set in the plan. This function is simply implemented as follows in TypeScript:
 
-<pre lang="typescript">
+```js
 const scale = (e: PlaneSet, lambdax: number, lambday: number, deltax: number, 
                deltay: number) => (p: Point) => e(scalePoint(1 / lambdax, 1 / lambday, 
                -deltax / lambdax, -deltay / lambday)(p))
-</pre>
+```
 
 `scale` takes as parameters `deltax` which is the delta distance in the first Euclidean dimension, `deltay` which is the delta distance in the second Euclidean dimension and `(lambdax, lambday)` which is the constant factor vector λ. If a point _P (x, y)_ is transformed through `scale` in a set _S_, then its coordinates will change to _(x', y') = (lambdax * x, delatx, lambday * y, deltay)_. Thus, the point _((x'- delatx)/lambdax, (y' - deltay)/lambday)_ will always belong to the set _S_, If lambda is different from the vector 0, of course. In algebra of sets, `scale` is called isomorph, in other words, the set of all homotheties forms the _Homothety group H_, which is isomorphic to the space itself \ {0}. This explains the main logic of the function.
 
 Thus, running the code below in our HTML5 page:
 
-<pre lang="typescript">
+```js
 let scale_timer: ReturnType<typeof setInterval>
 function scale_op() {
   let deltay = 0
@@ -851,13 +860,13 @@ function scale_op() {
     euclideanPlane.draw(scale(disk(new Point(0, -50), 50), 1, lambday, 0, deltay), 'ep_op')
   }, 1000)
 }
-</pre>
+```
 
 gives the following result:
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/ScaleDemo.gif?raw=true)
 
-#### Rotate
+### Rotate
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/RotionFunction.png?raw=true)
 
@@ -879,22 +888,22 @@ Below the demonstration:
 
 Thus the implementation in TypeScript is as follows:
 
-<pre lang="typescript">
+```js
 const rotatePoint = (theta: number) => (p: Point) => new Point(p.x * Math.cos(theta) 
       - p.y * Math.sin(theta), p.x * Math.sin(theta) + p.y * Math.cos(theta))
-</pre>
+```
 
 Let `rotate` be the function that applies a rotation on a set in the plane with the angle θ. This function is simply implemented as follows in TypeScript.
 
-<pre lang="typescript">
+```js
 const rotate = (e: PlaneSet, theta: number) => (p: Point) => e(rotatePoint(-theta)(p))
-</pre>
+```
 
 `rotate` is a function that takes as parameter `theta` which is the angle of the rotation. If a point _P (x, y)_ is transformed through `rotate` in a set _S_, then its coordinates will change to _(x', y') = (x * cos(theta) - y * sin(theta), x * sin(theta), y * cos(theta))_. Thus, the point _(x' * cos(theta), y' * sin(theta), y' * cos(theta) - x' * sin(theta))_ will always belong to the set _S_. In algebra of sets, `rotate` is called isomorph, in other words, the set of all rotations forms the _Rotation group R_, which is isomorphic to the space itself. This explains the main logic of the function.
 
 Thus, running the code below in our HTML5 page:
 
-<pre lang="typescript">
+```js
 let rotate_timer: ReturnType<typeof setInterval>
 function rotate_op() {
   let theta = 0
@@ -905,7 +914,7 @@ function rotate_op() {
     theta = (theta + Math.PI / 2) % (2 * Math.PI)
   }, 1000)
 }
-</pre>
+```
 
 gives the following result:
 
@@ -942,15 +951,15 @@ where `c` is a complex. The _Mandelbrot_ fractal is defined as the set of all po
 
 Fractals (abstract data type) can always be represented as follows in TypeScript:
 
-<pre lang="typescript">
+```js
 type Fractal = (z: Complex, c: Complex) => Complex
-</pre>
+```
 
 ### <a id="fractals-draw" name="fractals-draw">Complex Numbers and Drawing</a>
 
 In order to be able to draw fractals, I needed to manipulate _Complex_ numbers. Thus, I created the `Complex` class below:
 
-<pre lang="typescript">
+```js
 class Complex {
     x: number
     y: number
@@ -981,18 +990,19 @@ function substract(z1: Complex, z2: Complex) {
 function multiply(z1: Complex, z2: Complex) {
     return new Complex(z1.x * z2.x - z1.y * z2.y, z1.x * z2.y + z1.y * z2.x)
 }
-</pre>
+```
 
 ### <a id="fractals-mondlebrot" name="fractals-mondlebrot">Mandelbrot Fractal</a>
 
 I created a _Mandelbrot Fractal_ (abstract data type representation) `P(z) = z^2 + c` that is available below.
 
-<pre lang="typescript">
-const mandelbrot = (z: Complex, c: Complex) => add(multiply(z, z), c)</pre>
+```js
+const mandelbrot = (z: Complex, c: Complex) => add(multiply(z, z), c)
+```
 
 In order to be able to draw _Complex_ numbers, I created a `ComplexPlane` class. Below is the implementation in TypeScript.
 
-<pre lang="typescript">
+```js
 class ComplexPlane {
   width: number
   height: number
@@ -1057,11 +1067,11 @@ class ComplexPlane {
     context.fillText('Please wait...', this.width / 2 - 30, this.height / 2)
   }
 }
-</pre>
+```
 
 Thus, running the code below:
 
-<pre lang="typescript">
+```js
 const complexPlane = new ComplexPlane(300, 300, -1.5, 1.5, -1.5, 1.5, 1.5, 20, 'fractal')
 
 const mandelbrot = (z: Complex, c: Complex) => add(multiply(z, z), c)
@@ -1069,13 +1079,13 @@ const mandelbrot = (z: Complex, c: Complex) => add(multiply(z, z), c)
 complexPlane.pleaseWait()
 
 setTimeout(() => complexPlane.draw(mandelbrot), 500)
-</pre>
+```
 
 where `fractal` is the `id` of the canvas:
 
-<pre lang="html">
+```html
 <canvas id="fractal"></canvas>
-</pre>
+```
 
 gives the following result:
 
