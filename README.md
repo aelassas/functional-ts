@@ -20,8 +20,6 @@
     2.  [Mandelbrot Fractal](#fractals-mondlebrot)
     3.  [Go Further](#fractals-further)
 
-You can find source code here: [https://github.com/aelassas/functional-ts](https://github.com/aelassas/functional-ts)
-
 ## <a id="intro" name="intro">Introduction</a>
 
 In TypeScript, functions are nothing but objects. Hence, functions can be constructed, passed as parameter, returned from functions or assigned into variables. Thus, TypeScript has [first-class functions](http://en.wikipedia.org/wiki/First-class_function). More precisely, TypeScript supports the following:
@@ -830,9 +828,11 @@ where `(deltax, deltay)` is the constant vector of the translation and `(lambdax
 
 Let `scale` be the function that applies an homothety on a set in the plan. This function is simply implemented as follows in TypeScript:
 
-<pre lang="typescript">const scale = (e: PlaneSet, lambdax: number, lambday: number, deltax: number, 
+<pre lang="typescript">
+const scale = (e: PlaneSet, lambdax: number, lambday: number, deltax: number, 
                deltay: number) => (p: Point) => e(scalePoint(1 / lambdax, 1 / lambday, 
-               -deltax / lambdax, -deltay / lambday)(p))</pre>
+               -deltax / lambdax, -deltay / lambday)(p))
+</pre>
 
 `scale` takes as parameters `deltax` which is the delta distance in the first Euclidean dimension, `deltay` which is the delta distance in the second Euclidean dimension and `(lambdax, lambday)` which is the constant factor vector λ. If a point _P (x, y)_ is transformed through `scale` in a set _S_, then its coordinates will change to _(x', y') = (lambdax * x, delatx, lambday * y, deltay)_. Thus, the point _((x'- delatx)/lambdax, (y' - deltay)/lambday)_ will always belong to the set _S_, If lambda is different from the vector 0, of course. In algebra of sets, `scale` is called isomorph, in other words, the set of all homotheties forms the _Homothety group H_, which is isomorphic to the space itself \ {0}. This explains the main logic of the function.
 
@@ -1090,4 +1090,3 @@ For those who want to go further, you can explore these:
 *   Other Fractals
 
 That's it! I hope you enjoyed reading.
-
