@@ -1,4 +1,4 @@
-[![build](https://github.com/aelassas/functional-ts/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/build.yml) [![CodeFactor](https://www.codefactor.io/repository/github/aelassas/functional-ts/badge)](https://www.codefactor.io/repository/github/aelassas/functional-ts)
+[![build](https://github.com/aelassas/functional-ts/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/build.yml)
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/Article.PNG?raw=true)
 
