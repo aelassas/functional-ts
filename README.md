@@ -1,4 +1,4 @@
-[![build](https://github.com/aelassas/functional-ts/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/build.yml)
+[![build](https://github.com/aelassas/functional-ts/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/build.yml) [![test](https://github.com/aelassas/functional-ts/actions/workflows/test.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/aelassas/functional-ts/graph/badge.svg?token=W2CJ5L3BT9)](https://codecov.io/gh/aelassas/functional-ts)
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/Article.PNG?raw=true)
 
