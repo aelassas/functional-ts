@@ -60,6 +60,12 @@ To run fractals' demo, run the following command:
 npm run fractals
 ```
 
+To run unit tests, run the following command:
+
+```bash
+npm test
+```
+
 ## <a id="rep-data" name="rep-data">Representing Data Through Functions</a>
 
 Let `S` be any set of elements `a`, `b`, `c` ... (for instance, the books on the table or the points of the Euclidean plane) and let `S'` be any subset of these elements (for instance, the green books on the table or the points in the circle of radius 1 centered at the origin of the Euclidean plane).
