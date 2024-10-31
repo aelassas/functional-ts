@@ -62,7 +62,7 @@ npm run fractals
 
 To run unit tests, run the following command:
 
-```bash
+```
 npm test
 ```
 
@@ -1247,7 +1247,7 @@ describe('Test Remove', () => {
 
 After running the unit tests with the following command:
 
-```bash
+```
 npm test
 ```
 
