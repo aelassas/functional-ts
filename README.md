@@ -36,9 +36,16 @@ This article will not discuss the basics of functional programming, as you can f
 
 ## <a id="env" name="env">TypeScript Environment</a>
 
-To run the source code, you'll need to install [Node.js](https://nodejs.org/en). Once Node.js is installed, download the source code archive, unzip it, go to the source code folder you unzipped on a terminal, set up TypeScript environment and install all necessary dependencies with the following command:
+To run the source code, you'll need to install [Node.js](https://nodejs.org/en). Once Node.js is installed, clone the GitHub repository:
 
 ```bash
+git clone https://github.com/aelassas/functional-ts.git
+```
+
+Go to the source code folder, set up TypeScript environment and install all necessary dependencies with the following commands:
+
+```bash
+cd functional-ts
 npm install
 ```
 
