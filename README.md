@@ -19,7 +19,7 @@
     1.  [Complex Numbers and Drawing](#fractals-draw)
     2.  [Mandelbrot Fractal](#fractals-mondlebrot)
     3.  [Go Further](#fractals-further)
-6.  [Unit tests](#unit-tests)
+6.  [Unit Tests](#unit-tests)
 
 ## <a id="intro" name="intro">Introduction</a>
 
@@ -44,7 +44,7 @@ git clone https://github.com/aelassas/functional-ts.git
 
 Go to the source code folder, set up TypeScript environment and install all necessary dependencies with the following commands:
 
-```bash
+```
 cd functional-ts
 npm install
 ```
@@ -1113,7 +1113,7 @@ For those who want to go further, you can explore these:
 *   Julia Fractals
 *   Other Fractals
 
-### <a id="unit-tests" name="unit-tests">Unit tests</a>
+### <a id="unit-tests" name="unit-tests">Unit Tests</a>
 
 Below are the unit tests of number sets:
 
