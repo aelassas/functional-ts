@@ -49,19 +49,19 @@ cd functional-ts
 npm install
 ```
 
-To run numbers' demo, run the following command:
+To run numbers demo, run the following command:
 
 ```bash
 npm run numbers
 ```
 
-To run Euclidean plane's demo, run the following command:
+To run Euclidean plane demo, run the following command:
 
 ```bash
 npm run plane
 ```
 
-To run fractals' demo, run the following command:
+To run fractals demo, run the following command:
 
 ```bash
 npm run fractals
