@@ -1,8 +1,5 @@
-/**
- * set.fractals.demo.ts
- * Author: Akram El Assas
- * License: CPOL
-*/
+import { Complex, add, multiply } from './set.fractals'
+import { ComplexPlane } from './set.fractals.html5'
 
 const complexPlane = new ComplexPlane(300, 300, -1.5, 1.5, -1.5, 1.5, 1.5, 20, 'fractal')
 

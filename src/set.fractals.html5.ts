@@ -1,15 +1,11 @@
-/**
- * set.fractals.html5.ts
- * Author: Akram El Assas
- * License: CPOL
-*/
+import { Complex } from './set.fractals'
 
 type Fractal = (z: Complex, c: Complex) => Complex
 
 /**
  * Complex plane
  */
-class ComplexPlane {
+export class ComplexPlane {
   width: number
   height: number
   real_min: number

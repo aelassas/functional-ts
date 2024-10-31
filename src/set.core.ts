@@ -1,9 +1,3 @@
-/**
- * set.core.ts
- * Author: Akram El Assas
- * License: CPOL
-*/
-
 /* functors
 *************************************** */
 

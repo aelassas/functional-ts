@@ -1,9 +1,3 @@
-/**
- * set.common.ts
- * Author: Akram El Assas
- * License: CPOL
-*/
-
 /* functors
 *************************************** */
 

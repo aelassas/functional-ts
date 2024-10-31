@@ -1,14 +1,3 @@
-/**
- * set.numbers.demo.ts
- * Author: Akram El Assas
- * License: CPOL
- *
-*/
-
-/*
- * Load set.core, set.common and set.numbers to perfom the demo.
- *
-*/
 import * as core from './set.core'
 import * as common from './set.common'
 import * as numbers from './set.numbers'

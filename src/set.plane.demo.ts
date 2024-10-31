@@ -1,9 +1,6 @@
-/**
- * set.plane.demo.ts
- * Author: Akram El Assas
- * License: CPOL
-*/
 import * as set from './set.core'
+import { Plane } from './set.plane.html5'
+import { Point, disk, horizontalHalfPlane, verticalHalfPlane, translate, scale, rotate } from './set.plane'
 
 /*
  * Initialize the euclidean plane

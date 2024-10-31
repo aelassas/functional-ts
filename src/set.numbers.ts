@@ -1,10 +1,4 @@
 /**
- * set.numbers.ts
- * Author: Akram El Assas
- * License: CPOL
-*/
-
-/**
  * Even numbers set
 */
 export const even = (x: number) => x % 2 === 0

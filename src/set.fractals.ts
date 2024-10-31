@@ -1,13 +1,7 @@
 /**
- * set.fractals.ts
- * Author: Akram El Assas
- * License: CPOL
-*/
-
-/**
  * Complex
  */
-class Complex {
+export class Complex {
     x: number
     y: number
     static zero = new Complex(0, 0)
@@ -26,14 +20,14 @@ class Complex {
     }
 }
 
-function add(z1: Complex, z2: Complex) {
+export function add(z1: Complex, z2: Complex) {
     return new Complex(z1.x + z2.x, z1.y + z2.y)
 }
 
-function substract(z1: Complex, z2: Complex) {
+export function substract(z1: Complex, z2: Complex) {
     return new Complex(z1.x - z2.x, z1.y - z2.y)
 }
 
-function multiply(z1: Complex, z2: Complex) {
+export function multiply(z1: Complex, z2: Complex) {
     return new Complex(z1.x * z2.x - z1.y * z2.y, z1.x * z2.y + z1.y * z2.x)
 }

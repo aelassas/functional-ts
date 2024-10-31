@@ -1,10 +1,6 @@
-/**
- * set.plane.html5.ts
- * Author: Akram El Assas
- * License: CPOL
-*/
+import { PlaneSet, Point } from './set.plane'
 
-class Plane {
+export class Plane {
   width: number
   height: number
 
