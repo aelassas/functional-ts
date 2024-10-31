@@ -1115,7 +1115,7 @@ For those who want to go further, you can explore these:
 
 ### <a id="unit-tests" name="unit-tests">Unit Tests</a>
 
-Below are the unit tests of number sets:
+Below are the unit tests for sets of numbers.
 
 ```js
 import * as core from '../src/set.core'
