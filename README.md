@@ -1239,6 +1239,14 @@ describe('Test Remove', () => {
 })
 ```
 
-After running the unit tests, we reach 100% of code coverage.
+After running the unit tests with the following command:
+
+```bash
+npm test
+```
+
+We reach 100% of code coverage.
+
+The coverage report is written in `./coverage` folder.
 
 That's it! I hope you enjoyed reading.
