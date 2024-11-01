@@ -1,4 +1,4 @@
-[![build](https://github.com/aelassas/functional-ts/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/build.yml) [![test](https://github.com/aelassas/functional-ts/actions/workflows/test.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/aelassas/functional-ts/graph/badge.svg?token=W2CJ5L3BT9)](https://codecov.io/gh/aelassas/functional-ts)
+[![build](https://github.com/aelassas/functional-ts/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/build.yml) [![test](https://github.com/aelassas/functional-ts/actions/workflows/test.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/aelassas/functional-ts/graph/badge.svg?token=W2CJ5L3BT9)](https://codecov.io/gh/aelassas/functional-ts) [![](https://img.shields.io/badge/plane-demo-brightgreen)](https://aelassas.github.io/functional-ts/src/set.plane.demo.html) [![](https://img.shields.io/badge/fractals-demo-brightgreen)](https://aelassas.github.io/functional-ts/src/set.fractals.demo.html)
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/Article.PNG?raw=true)
 
@@ -19,7 +19,7 @@
     1.  [Complex Numbers and Drawing](#fractals-draw)
     2.  [Mandelbrot Fractal](#fractals-mondlebrot)
     3.  [Go Further](#fractals-further)
-6.  [Unit tests](#unit-tests)
+6.  [Unit Tests](#unit-tests)
 
 ## <a id="intro" name="intro">Introduction</a>
 
@@ -32,7 +32,7 @@ In TypeScript, functions are nothing but objects. Hence, functions can be constr
 *   Closures
 *   Partial application (ECMAScript 5)
 
-This article will not discuss the basics of functional programming, as you can find numerous resources on this topic on the Internet. Instead, it will talk about functional programming in TypeScript applied to algebra, numbers, the Euclidean plane, and fractals. The examples provided in this article will start from simple to more complex but always illustrated in a simple, straightforward and easy-to-understand manner.
+This article will not discuss the basics of functional programming, as you can find numerous resources on this topic. Instead, it will talk about functional programming in TypeScript applied to algebra, numbers, the Euclidean plane, and fractals. The examples provided in this article will start from simple to more complex but always illustrated in a simple, straightforward and easy-to-understand manner.
 
 ## <a id="env" name="env">TypeScript Environment</a>
 
@@ -44,24 +44,24 @@ git clone https://github.com/aelassas/functional-ts.git
 
 Go to the source code folder, set up TypeScript environment and install all necessary dependencies with the following commands:
 
-```bash
+```
 cd functional-ts
 npm install
 ```
 
-To run numbers' demo, run the following command:
+To run numbers demo, run the following command:
 
 ```bash
 npm run numbers
 ```
 
-To run Euclidean plane's demo, run the following command:
+To run Euclidean plane demo, run the following command:
 
 ```bash
 npm run plane
 ```
 
-To run fractals' demo, run the following command:
+To run fractals demo, run the following command:
 
 ```bash
 npm run fractals
@@ -1113,9 +1113,9 @@ For those who want to go further, you can explore these:
 *   Julia Fractals
 *   Other Fractals
 
-### <a id="unit-tests" name="unit-tests">Unit tests</a>
+### <a id="unit-tests" name="unit-tests">Unit Tests</a>
 
-Below are the unit tests of number sets:
+Below are the unit tests for sets of numbers.
 
 ```js
 import * as core from '../src/set.core'
