@@ -37,7 +37,7 @@ In TypeScript, functions are nothing but objects. Hence, functions can be constr
 *   Closures
 *   Partial application (ECMAScript 5)
 
-This article will not discuss the basics of functional programming, as you can find numerous resources on this topic. Instead, it will talk about functional programming in TypeScript applied to algebra, numbers, the Euclidean plane, and fractals. The examples provided in this article will start from simple to more complex but always illustrated in a simple, straightforward and easy-to-understand manner.
+This article will not discuss the basics of functional programming, as you can find numerous resources on this topic. Instead, it will talk about functional programming in TypeScript applied to algebra, numbers, Euclidean plane, and fractals. The examples provided in this article will start from simple to more complex but always illustrated in a simple, straightforward and easy-to-understand manner.
 
 ## <a id="env" name="env">TypeScript Environment</a>
 
