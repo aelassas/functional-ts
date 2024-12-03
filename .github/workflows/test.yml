@@ -43,5 +43,4 @@ jobs:
         file: ./coverage/cobertura-coverage.xml
         base-path: src
         fail-on-error: true
-        debug: true
         measure: true            
