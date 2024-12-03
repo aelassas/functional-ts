@@ -1,7 +1,11 @@
-[![build](https://github.com/aelassas/functional-ts/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/build.yml) [![test](https://github.com/aelassas/functional-ts/actions/workflows/test.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/aelassas/functional-ts/graph/badge.svg?token=W2CJ5L3BT9)](https://codecov.io/gh/aelassas/functional-ts) 
+[![build](https://github.com/aelassas/functional-ts/actions/workflows/build.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/build.yml) [![test](https://github.com/aelassas/functional-ts/actions/workflows/test.yml/badge.svg)](https://github.com/aelassas/functional-ts/actions/workflows/test.yml) [![coveralls](https://coveralls.io/repos/github/aelassas/functional-ts/badge.svg?branch=main)](https://coveralls.io/github/aelassas/functional-ts?branch=main)
+
 <!--
 [![](https://img.shields.io/badge/plane-demo-brightgreen)](https://aelassas.github.io/functional-ts/src/set.plane.demo.html) 
 [![](https://img.shields.io/badge/fractals-demo-brightgreen)](https://aelassas.github.io/functional-ts/src/set.fractals.demo.html)
+[![codecov](https://codecov.io/gh/aelassas/functional-ts/graph/badge.svg?token=W2CJ5L3BT9)](https://codecov.io/gh/aelassas/functional-ts) 
+[![coveralls](https://coveralls.io/repos/github/aelassas/functional-ts/badge.svg?branch=main)](https://coveralls.io/github/aelassas/functional-ts?branch=main)
+
 -->
 
 ![Image](https://github.com/aelassas/functional-ts/blob/main/img/Article.PNG?raw=true)
