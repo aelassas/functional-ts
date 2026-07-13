@@ -1271,3 +1271,4 @@ We reach 100% of code coverage.
 The coverage report is written in `./coverage` folder.
 
 That's it! I hope you enjoyed reading.
+
