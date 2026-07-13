@@ -40,8 +40,8 @@ jobs:
 
     - name: Upload coverage reports to Coveralls
       uses: coverallsapp/github-action@v2
+      continue-on-error: true
       with:
         file: ./coverage/cobertura-coverage.xml
         base-path: src
-        fail-on-error: true
         measure: true            
